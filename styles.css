@@ -1,0 +1,79 @@
+body{
+        background-color:lightsteelblue;
+        }
+#container{		
+		width:80%; 
+		margin:50px auto;
+		background-color: #CC9; 
+		color: #fff;
+		border: 0px solid blue;
+	   }
+#top{
+		padding:.5em; 
+		background-color:#ff6666;
+		border-bottom: 2px solid white;
+		border-top: 2px solid red;
+		border-left:2px solid red;
+		border-right:2px solid red;
+	   }
+#leftnav{
+		float: left;
+		width: auto;
+        border-bottom: 0px solid blue;
+		border-top: 0px solid blue;
+		border-left:0px solid blue;
+		border-right:0px solid blue;
+		margin: 0;
+		padding: 1em;
+	   }
+#content{
+        margin-left:200px;
+		border-left:2px solid red;
+		padding: .5em;
+        text-align:center;
+	   }
+#footer{
+		clear: both;
+		margin: 0;
+		padding: .5em;
+		color: #333;
+		background-color:lightblue;
+		border-bottom: 0px solid red;
+		border-top: 0px solid red;
+		border-left: 0px solid red;
+		border-right: 0px solid red;
+        text-align:right;
+	   }
+ul{
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        }
+a{
+        float: left;
+        width: 10em;
+        text-decoration: none;
+        color: black;
+        background-color: orange;
+        padding: 0.2em 0.6em;
+        border-right: 1px solid white;
+        border-radius: 20px;
+        }
+a:hover {
+        background-color: #ffe4c0;
+        }
+/* "Block Comment"
+li {
+    display: inline;
+}
+*/
+h1{
+        color: blue;      }
+h2{
+        color: blue;
+        }
+p{
+        color: black;
+        }
