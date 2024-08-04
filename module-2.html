@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 2 - Using Machines</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <LINK rel="stylesheet" href="styles.css" type="text/css">
+    <title>Module 2: Using Machines</title>
 </head>
 <body>
     <nav>
@@ -17,104 +15,139 @@
     <div class="container">
         <section id="Module-2">
             <h1>Module 2</h1>
-            <p>This is the page for module two.</p>
-            <h2>Quiz: Using Machines</h2>
-            <div id="quiz-container">
-                <form id="quiz-form">
-                    <div class="quiz-question">
-                        <p>1. What is the primary benefit of using weight machines?</p>
-                        <input type="radio" id="q1a1" name="q1" value="incorrect">
-                        <label for="q1a1">A. They are always safer than free weights.</label><br>
-                        <input type="radio" id="q1a2" name="q1" value="correct">
-                        <label for="q1a2">B. They help maintain proper form and reduce the risk of injury.</label><br>
-                        <input type="radio" id="q1a3" name="q1" value="incorrect">
-                        <label for="q1a3">C. They burn more calories than free weights.</label><br>
-                        <input type="radio" id="q1a4" name="q1" value="incorrect">
-                        <label for="q1a4">D. They are more suitable for advanced lifters.</label><br><br>
-                    </div>
-
-                    <div class="quiz-question">
-                        <p>2. Which muscle group is primarily targeted when using the leg press machine?</p>
-                        <input type="radio" id="q2a1" name="q2" value="correct">
-                        <label for="q2a1">A. Quadriceps</label><br>
-                        <input type="radio" id="q2a2" name="q2" value="incorrect">
-                        <label for="q2a2">B. Biceps</label><br>
-                        <input type="radio" id="q2a3" name="q2" value="incorrect">
-                        <label for="q2a3">C. Triceps</label><br>
-                        <input type="radio" id="q2a4" name="q2" value="incorrect">
-                        <label for="q2a4">D. Shoulders</label><br><br>
-                    </div>
-
-                    <div class="quiz-question">
-                        <p>3. What should you adjust on a machine before starting your exercise?</p>
-                        <input type="radio" id="q3a1" name="q3" value="incorrect">
-                        <label for="q3a1">A. The color</label><br>
-                        <input type="radio" id="q3a2" name="q3" value="correct">
-                        <label for="q3a2">B. The seat and weight</label><br>
-                        <input type="radio" id="q3a3" name="q3" value="incorrect">
-                        <label for="q3a3">C. The brand</label><br>
-                        <input type="radio" id="q3a4" name="q3" value="incorrect">
-                        <label for="q3a4">D. The location in the gym</label><br><br>
-                    </div>
-
-                    <div class="quiz-question">
-                        <p>4. How often should you clean the machines after use?</p>
-                        <input type="radio" id="q4a1" name="q4" value="incorrect">
-                        <label for="q4a1">A. Once a week</label><br>
-                        <input type="radio" id="q4a2" name="q4" value="incorrect">
-                        <label for="q4a2">B. Once a month</label><br>
-                        <input type="radio" id="q4a3" name="q4" value="correct">
-                        <label for="q4a3">C. After each use</label><br>
-                        <input type="radio" id="q4a4" name="q4" value="incorrect">
-                        <label for="q4a4">D. Only if you sweat on it</label><br><br>
-                    </div>
-
-                    <div class="quiz-question">
-                        <p>5. Which of the following is NOT a benefit of using weight machines?</p>
-                        <input type="radio" id="q5a1" name="q5" value="incorrect">
-                        <label for="q5a1">A. Easier to use for beginners</label><br>
-                        <input type="radio" id="q5a2" name="q5" value="correct">
-                        <label for="q5a2">B. Improves cardiovascular endurance</label><br>
-                        <input type="radio" id="q5a3" name="q5" value="incorrect">
-                        <label for="q5a3">C. Helps maintain proper form</label><br>
-                        <input type="radio" id="q5a4" name="q5" value="incorrect">
-                        <label for="q5a4">D. Isolates specific muscle groups</label><br><br>
-                    </div>
-
-                    <button type="button" onclick="checkAnswers()">Submit</button>
-                </form>
-                <div id="results"></div>
-            </div>
-        </section>
-    </div>
-    <script>
-        function checkAnswers() {
-            const questions = document.querySelectorAll('.quiz-question');
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = ''; // Clear previous results
-
-            questions.forEach((question, index) => {
-                const selectedOption = question.querySelector('input[name="q' + (index + 1) + '"]:checked');
-                const result = document.createElement('p');
-                if (selectedOption) {
-                    if (selectedOption.value === 'correct') {
-                        result.textContent = 'Question ' + (index + 1) + ': Correct!';
-                        result.style.color = 'green';
-                    } else {
-                        result.textContent = 'Question ' + (index + 1) + ': Incorrect.';
-                        result.style.color = 'red';
-                    }
-                } else {
-                    result.textContent = 'Question ' + (index + 1) + ': No answer selected.';
-                    result.style.color = 'orange';
-                }
-                resultsDiv.appendChild(result);
-            });
-        }
-    </script>
-                <nav>
+            <nav>
                 <a href="module-1.html">Previous Module</a>
                 <a href="module-3.html">Next Module</a>
             </nav>
+            <h2>Quiz: Using Machines</h2>
+            <div align="left">
+                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                    <tr>
+                        <td width="50%">
+                            <form method="POST" name="instantquiz">
+                                <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                                    <caption><strong>JavaScript Kit Pop Quiz</strong></caption>
+                                    <tr>
+                                        <td width="100%">
+                                            <div align="center">
+                                                <center>
+                                                    <p><textarea rows="10" name="thequestion" cols="69" wrap="virtual"></textarea></p>
+                                                </center>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr align="center">
+                                        <td width="50%">
+                                            <div align="center">
+                                                <center>
+                                                    <p><strong>Solution: </strong><input type="text" name="thesolution" size="35"></p>
+                                                </center>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr align="center">
+                                        <td width="100%">
+                                            <div align="center">
+                                                <center>
+                                                    <p><strong>Your response:</strong> 
+                                                        <select name="theresponse" size="1" onChange="responses()">
+                                                            <option value="-----">----</option>
+                                                            <option value="a">a</option>
+                                                            <option value="b">b</option>
+                                                            <option value="c">c</option>
+                                                            <option value="d">d</option>
+                                                        </select> 
+                                                        <input type="button" value="&lt;&lt;Back" name="B1" onClick="if (whichone>1){whichone--;generatequestions()}"> 
+                                                        <input type="button" value="Next&gt;&gt;" name="B2" onClick="if (whichone<=total){whichone++;generatequestions()}">
+                                                        <br>
+                                                        <small><a href="#" onClick="whichone=1;generatequestions();return false">Start Over</a></small>
+                                                        <input type="checkbox" name="cmode" value="ON">
+                                                        <small>Cheat Mode</small>
+                                                        <p align="center"><font face="arial" size="-2">This free quiz script provided by</font><br> 
+                                                        <font face="arial, helvetica" size="-2"><a href="http://javascriptkit.com">JavaScript Kit</a></font></p>
+                                                    </p>
+                                                </center>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        var total = 5; // Total number of questions
+        var whichone = 1;
+        var compliments = ["Good job!", "Well done!", "Correct!", "Nice work!"];
+        var question = [];
+        var choice1 = [];
+        var choice2 = [];
+        var choice3 = [];
+        var choice4 = [];
+        var solution = [];
+
+        question[1] = "What is the primary benefit of using weight machines?";
+        choice1[1] = "They are always safer than free weights.";
+        choice1[2] = "They help maintain proper form and reduce the risk of injury.";
+        choice1[3] = "They burn more calories than free weights.";
+        choice1[4] = "They are more suitable for advanced lifters.";
+        solution[1] = "b";
+
+        question[2] = "Which muscle group is primarily targeted when using the leg press machine?";
+        choice2[1] = "Quadriceps";
+        choice2[2] = "Biceps";
+        choice2[3] = "Triceps";
+        choice2[4] = "Shoulders";
+        solution[2] = "a";
+
+        question[3] = "What should you adjust on a machine before starting your exercise?";
+        choice3[1] = "The color";
+        choice3[2] = "The seat and weight";
+        choice3[3] = "The brand";
+        choice3[4] = "The location in the gym";
+        solution[3] = "b";
+
+        question[4] = "How often should you clean the machines after use?";
+        choice4[1] = "Once a week";
+        choice4[2] = "Once a month";
+        choice4[3] = "After each use";
+        choice4[4] = "Only if you sweat on it";
+        solution[4] = "c";
+
+        question[5] = "Which of the following is NOT a benefit of using weight machines?";
+        choice5[1] = "Easier to use for beginners";
+        choice5[2] = "Improves cardiovascular endurance";
+        choice5[3] = "Helps maintain proper form";
+        choice5[4] = "Isolates specific muscle groups";
+        solution[5] = "b";
+
+        function generatequestions() {
+            document.instantquiz.theresponse.selectedIndex = 0;
+            if (!document.instantquiz.cmode.checked || whichone >= total + 1 || whichone <= 0)
+                document.instantquiz.thesolution.value = '';
+            if (whichone >= total + 1)
+                document.instantquiz.thequestion.value = "End of quiz";
+            else {
+                document.instantquiz.thequestion.value = whichone + ")" + question[whichone] + "\n\n" + "a)" + eval('choice' + whichone + '[1]') + "\n" + "b)" + eval('choice' + whichone + '[2]') + "\n" + "c)" + eval('choice' + whichone + '[3]') + "\n" + "d)" + eval('choice' + whichone + '[4]');
+                if (document.instantquiz.cmode.checked)
+                    document.instantquiz.thesolution.value = solution[whichone];
+            }
+        }
+
+        function responses() {
+            var temp2 = document.instantquiz.theresponse;
+            var temp3 = temp2.options[temp2.selectedIndex].text;
+            if (temp3 != solution[whichone] && temp2.selectedIndex != 0)
+                document.instantquiz.thesolution.value = "Sorry, the correct answer is " + solution[whichone];
+            else if (temp2.selectedIndex != 0)
+                document.instantquiz.thesolution.value = compliments[Math.round(Math.random() * compliments.length - 1)];
+        }
+
+        generatequestions();
+    </script>
 </body>
 </html>
